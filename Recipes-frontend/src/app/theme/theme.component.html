@@ -1,0 +1,52 @@
+<button class="position-absolute top-2 start-50 translate-middle btn btn-light btn-primary rounded-pill" (click)="testirajWebApi()">
+    Ucitaj Teme
+ </button>
+ 
+ <p>
+   Pretraga po nazivu teme... <input [(ngModel)]="naziv">
+ </p>
+ <table class="table table-warning">
+   <tr>
+     <th>ID</th>
+     <th>Naziv</th>
+     <th>Opis</th>
+
+   </tr>
+   <tbody>
+   <tr *ngFor="let s of getTemaPodaci()">
+     <td>{{s.id}}</td>
+     <td>{{s.naziv}}</td>
+     <td>{{s.opis}}</td>
+
+
+     <td>
+       <button (click)="obrisiTemu(s)">Obrisi</button>
+       <button (click)="detalji(s)">Uredi</button>
+
+     </td>
+   </tr>
+   </tbody>
+ </table>
+
+ <div *ngIf="odabranaTema != null" style="border: 1px solid blue">
+ 
+    <div class="mb-3">
+      <label class="form-label">Naziv recepta</label>
+      <input class="form-control" [(ngModel)]="odabranaTema.naziv"  placeholder="Naziv teme">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Opis recepta</label>
+      <input class="form-control" [(ngModel)]="odabranaTema.opis"  placeholder="Opis">
+    </div>
+   
+    <button class="form-label" (click)="snimi()">Snimi</button>
+  </div>
+
+
+ 
+ 
+
+ 
+ 
+ 

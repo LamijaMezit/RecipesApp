@@ -1,3 +1,3 @@
 # RecipesApp
 
-Seminarski rad iz predmeta Razvoj softvera I. 
+Works from the subject Software development I. 
